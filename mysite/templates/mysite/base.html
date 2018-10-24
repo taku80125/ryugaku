@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +12,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">     
 
 </head>
-<div class="container">
-<h1 class="text-center" style ="margin-top:20px; margin-bottom:20px;"> バンガロール留学</h1>
+<div class="container float-center">
+<!-- <h1 class="text-center" style ="margin-top:20px; margin-bottom:20px;"> バンガロール留学</h1> -->
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
                 <a class="navbar-brand" href="#">ホーム</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -32,7 +33,7 @@
                                 <a class="nav-link" href="#">プログラミングスクール一覧 <span class="sr-only">(current)</span></a>
                               </li>
                     <li class="nav-item active">
-                            <a class="nav-link" href="#">留学費用 <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{% url 'money' %}">留学費用 <span class="sr-only">(current)</span></a>
                     </li>
                   </ul>
                  
@@ -40,6 +41,6 @@
               </nav>
             </div>
                  {% block 'content'%}
-                 {% endblock %}
+                 {%endblock%}
 </body>
 </html>
