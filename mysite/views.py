@@ -11,3 +11,12 @@ def index(request):
 
 def money(request):
     return render(request,'mysite/money.html')    
+
+def contact(request):
+    return render(request,'mysite/contact.html')    
+
+def language(request):
+    return render(request,'mysite/language.html')    
+
+def programming(request):
+    return render(request,'mysite/programming.html')    

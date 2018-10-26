@@ -3,17 +3,21 @@
 
 
 {% block 'content'%}
-<div class="card text-center">
-       
-        <div class="card-body m-5" >
-          <h5 class="card-title">留学費用</h5>
-          <p class="card-text">学校によって留学費用は違いますがインドでは他の国に比べてやすい傾向があります。
-              
-          </p>
-          
-        </div>
-       
-        </div>
+{%load static%}
+
+<div class="container float-center">
+        <div class="card text-center bg-dark text-white"> 
+              <img class="card-img" src="{% static 'mysite/images/4.jpeg/' %}" alt="Card image" height="250">
+             
+              <div class="card-body card-img-overlay">
+                <h1 class="card-title">費用</h1>
+                <p class="card-text">インド留学は他の国に比べて安いですが質は問題ないものが多いです</p>
+                <a href="#" class="btn btn-primary">バンガロールについてもっと詳しく</a>
+              </div>
+              <div class="card-footer text-muted">
+                バンガロール留学
+              </div>
+            </div>
       
 <div class="container float-center">
 <div class="card-deck ">
@@ -42,4 +46,5 @@
         </div>
       </div>
     </div>
+</div>
 {% endblock %}
