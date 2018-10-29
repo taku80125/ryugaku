@@ -12,11 +12,22 @@ def index(request):
 def money(request):
     return render(request,'mysite/money.html')    
 
-def contact(request):
-    return render(request,'mysite/contact.html')    
-
 def language(request):
     return render(request,'mysite/language.html')    
 
 def programming(request):
     return render(request,'mysite/programming.html')    
+
+def getback(request):
+    return render(request,'mysite/getback.html')    
+
+def contact(request):
+    if request.method =="POST":
+        email= request.POST.get('email')
+        massage = request.POST.get('massage')
+        c=Contact(email=email,  massage=massage)
+        c.save()
+  
+        return render(request,'mysite/getback.html')   
+    else:
+        return render(request,'mysite/contact.html')   

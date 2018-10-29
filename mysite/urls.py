@@ -7,5 +7,6 @@ urlpatterns = [
     path('contact/',views.contact, name='contact'),
     path('language/',views.language, name='language'),
     path('programming/',views.programming, name='programming'),
+    path('getback/',views.getback, name='getback'),
 
 ]

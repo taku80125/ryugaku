@@ -4,8 +4,15 @@ from django.db import models
 
 
 class Student(models.Model):
-    firstname = models.CharField(max_length=30)
-    lastname = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.firstname
+        return self.first_name
+
+class Contact(models.Model):
+    email = models.EmailField()
+    massage = models.TextField()
+
+    def __str__(self):
+        return self.email
